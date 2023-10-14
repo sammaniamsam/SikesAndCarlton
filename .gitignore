@@ -1,0 +1,23 @@
+# Dependency directories
+node_modules/
+.cache/
+
+# Output directories
+public/
+
+# System files
+.DS_Store
+Thumbs.db
+
+# IDE directories
+.idea/
+.vscode/
+
+# Environment variables
+.env*
+!.env.example
+
+# Logs
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
