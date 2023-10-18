@@ -1,29 +1,33 @@
 /* src/components/Nav.css */
 .nav {
+    display: flex;
+    justify-content: center; /* Centers content horizontally */
     background-color: #333;
     padding: 1rem;
-}
-
-.nav-toggle {
-    font-size: 2rem;
-    background: none;
-    border: none;
-    color: white;
-    cursor: pointer;
-    display: none;  /* Hide by default */
 }
 
 .nav-links {
     list-style-type: none;
     margin: 0;
     padding: 0;
-    display: flex;
-    flex-direction: row;
-    justify-content: space-around;
+    display: flex; /* Sets to flex */
+    justify-content: center; /* Centers items horizontally */
+    align-items: center; /* Centers items vertically, if desired */
 }
 
 .nav-item {
-    margin: 0 1rem;
+    margin: 0 0.5rem; /* Adjusts margin for spacing between items */
+}
+
+.nav-toggle {
+    margin-left: auto;
+    font-size: 2rem;
+    background: none;
+    border: none;
+    color: white;
+    cursor: pointer;
+    display: none;  /* Hide by default */
+    float: right;  /* Aligns the toggle to the right */
 }
 
 .nav a {
@@ -33,8 +37,13 @@
 
 /* Mobile view */
 @media (max-width: 768px) {
+    .nav {
+        justify-content: flex-start; /* Aligns content to the start, to accommodate the nav-toggle button */
+    }
+
     .nav-toggle {
         display: block;  /* Show toggle button */
+        margin-left: auto; /* Pushes the toggle button to the right */
     }
 
     .nav-links {
