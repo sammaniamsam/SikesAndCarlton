@@ -1,0 +1,48 @@
+/* src/components/Nav.css */
+.nav {
+    background-color: #333;
+    padding: 1rem;
+}
+
+.nav-toggle {
+    font-size: 2rem;
+    background: none;
+    border: none;
+    color: white;
+    cursor: pointer;
+    display: none;  /* Hide by default */
+}
+
+.nav-links {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+}
+
+.nav-item {
+    margin: 0 1rem;
+}
+
+.nav a {
+    color: white;
+    text-decoration: none;
+}
+
+/* Mobile view */
+@media (max-width: 768px) {
+    .nav-toggle {
+        display: block;  /* Show toggle button */
+    }
+
+    .nav-links {
+        display: none;  /* Hide links */
+        flex-direction: column;
+    }
+
+    .nav-active {
+        display: flex;  /* Show links when active */
+    }
+}
