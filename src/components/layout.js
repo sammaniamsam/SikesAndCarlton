@@ -8,9 +8,9 @@
 import * as React from "react"
 import { useStaticQuery, graphql } from "gatsby"
 
-import Header from "./header"
-import "./layout.css"
+import "../css/layout.css"
 import NavBar from "./nav";
+import Footer from "./footer";
 
 const Layout = ({ children }) => {
   const data = useStaticQuery(graphql`
@@ -40,9 +40,7 @@ const Layout = ({ children }) => {
             fontSize: `var(--font-sm)`,
           }}
         >
-          © {new Date().getFullYear()} &middot; Built with
-          {` `}
-          <a href="https://www.gatsbyjs.com">Gatsby</a>
+          <Footer/>
         </footer>
       </div>
     </>
