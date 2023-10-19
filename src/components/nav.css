@@ -1,0 +1,57 @@
+/* src/components/nav.css */
+.nav {
+    display: flex;
+    justify-content: center; /* Centers content horizontally */
+    background-color: #333;
+    padding: 1rem;
+}
+
+.nav-links {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    display: flex; /* Sets to flex */
+    justify-content: center; /* Centers items horizontally */
+    align-items: center; /* Centers items vertically, if desired */
+}
+
+.nav-item {
+    margin: 0 0.5rem; /* Adjusts margin for spacing between items */
+}
+
+.nav-toggle {
+    margin-left: auto;
+    font-size: 2rem;
+    background: none;
+    border: none;
+    color: white;
+    cursor: pointer;
+    display: none;  /* Hide by default */
+    float: right;  /* Aligns the toggle to the right */
+}
+
+.nav a {
+    color: white;
+    text-decoration: none;
+}
+
+/* Mobile view */
+@media (max-width: 768px) {
+    .nav {
+        justify-content: flex-start; /* Aligns content to the start, to accommodate the nav-toggle button */
+    }
+
+    .nav-toggle {
+        display: block;  /* Show toggle button */
+        margin-left: auto; /* Pushes the toggle button to the right */
+    }
+
+    .nav-links {
+        display: none;  /* Hide links */
+        flex-direction: column;
+    }
+
+    .nav-active {
+        display: flex;  /* Show links when active */
+    }
+}

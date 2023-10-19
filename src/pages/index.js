@@ -3,6 +3,7 @@ import * as React from "react"
 import Layout from "../components/layout"
 import Seo from "../components/seo"
 import ImageGallery from "../components/ImageGallery";
+import Nav from "../components/nav";
 
 const IndexPage = () => (
   <Layout>
