@@ -1,4 +1,4 @@
-// src/components/ImageGallery.js
+// src/components/imageGallery.js
 import React from "react";
 import { withAlbumData } from './withAlbumData';
 import Gallery from "@browniebroke/gatsby-image-gallery";
