@@ -1,3 +1,15 @@
+## Adding Images and Albums
+
+### Images
+To add images to the site, you need to place the image files in the `src/images/albums/` directory. Ensure the images are in an appropriate format (e.g., jpg, png).
+
+### Albums
+An album is a collection of images. To create a new album:
+
+1. Create a new folder inside `src/images/albums/`.
+2. Name the folder according to the album's name. Ensure that the name is URL-friendly, as it will be used in the API endpoint.
+3. Place all the images for this album inside the folder.
+
 ## CI/CD Workflow with GitHub Actions
 
 Our project utilizes a Continuous Integration and Continuous Deployment (CI/CD) workflow via GitHub Actions, ensuring that changes pushed to the main branch are automatically built and deployed.
