@@ -1,4 +1,4 @@
-// src/components/withAlbumData.js
+// src/components/useAlbumData.js
 
 // Import necessary modules from React and Gatsby
 import React, { useEffect, useState } from 'react';
@@ -6,7 +6,7 @@ import { graphql, useStaticQuery } from 'gatsby';
 import exifReader from 'exifreader';
 
 // Create a Higher Order Component (HOC) to fetch album data
-export const withAlbumData = (Component) => {
+export const useAlbumData = (Component) => {
   // This function receives a Component as its parameter
   return (props) => {
     // Use Gatsby's useStaticQuery hook to perform a static GraphQL query.
