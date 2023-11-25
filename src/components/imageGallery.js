@@ -1,6 +1,6 @@
 // src/components/imageGallery.js
 import React from "react";
-import { useAlbumData } from '../hooks/useAlbumData';
+import { withAlbumData } from '../components/withAlbumData';
 import Gallery from "@browniebroke/gatsby-image-gallery";
 
 const ImageGallery = ({ data }) => {
@@ -10,8 +10,8 @@ const ImageGallery = ({ data }) => {
   }));
 
   return (
-      <Gallery images={images} />
+      <Gallery images={images} gutter={"0.1rem"} mdColWidth={25}/>
   );
 };
 
-export default useAlbumData(ImageGallery);
+export default withAlbumData(ImageGallery);

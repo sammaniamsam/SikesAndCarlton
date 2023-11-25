@@ -19,10 +19,11 @@ export const useAlbums = () => {
     .map(directory => ({
       title: directory
         .split('/')
-        .pop()
-        .split('-')
-        .map(word => word.charAt(0).toUpperCase() + word.slice(1))
-        .join(' '),
+        .map((subDirectory) => {
+          return subDirectory.split('-')
+            .map(word => word.charAt(0).toUpperCase() + word.slice(1))
+            .join(' ')
+        }).join(" / "),
       path: directory
     }))
     .filter((album) => album.title.length > 0 && album.path.length > 0);
