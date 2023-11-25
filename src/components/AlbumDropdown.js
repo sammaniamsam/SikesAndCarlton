@@ -11,7 +11,8 @@ const AlbumDropdown = ({ searchValue, handleSearch, filteredAlbums, scrollToAlbu
       <Dropdown.Menu className="w-100">
         <FormControl
           autoFocus
-          className="mx-3 my-2 w-auto"
+          style={{ width: 'calc(100% - 2rem)' }} // Adjust width to account for margins
+          className="mx-3 my-2"
           placeholder="Type to filter..."
           onChange={handleSearch}
           value={searchValue}
