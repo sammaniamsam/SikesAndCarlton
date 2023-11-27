@@ -6,23 +6,12 @@
  */
 
 import * as React from "react"
-import { useStaticQuery, graphql } from "gatsby"
 
 import "../css/layout.css"
 import NavBar from "./nav";
 import Footer from "./footer";
 
 const Layout = ({ children }) => {
-  const data = useStaticQuery(graphql`
-    query SiteTitleQuery {
-      site {
-        siteMetadata {
-          title
-        }
-      }
-    }
-  `)
-
   return (
     <>
       <NavBar/>
