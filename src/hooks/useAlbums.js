@@ -26,7 +26,8 @@ export const useAlbums = () => {
         }).join(" / "),
       path: directory
     }))
-    .filter((album) => album.title.length > 0 && album.path.length > 0);
+    .filter((album) => album.title.length > 0 && album.path.length > 0)
+      .sort((a, b) => a.title.localeCompare(b.title));
 
   return albums;
 };
