@@ -1,8 +1,8 @@
 // src/components/Nav.js
-import React from 'react';
-import { Navbar, Container, Nav } from 'react-bootstrap';
-import 'bootstrap/dist/css/bootstrap.min.css';
-import { Link } from "gatsby"
+import React from "react";
+import { Navbar, Container, Nav } from "react-bootstrap";
+import "bootstrap/dist/css/bootstrap.min.css";
+import { Link } from "gatsby";
 
 const NavBar = () => {
   return (
@@ -12,10 +12,18 @@ const NavBar = () => {
         <Navbar.Toggle aria-controls="basic-navbar-nav" />
         <Navbar.Collapse id="basic-navbar-nav">
           <Nav className="me-auto">
-            <Nav.Link to="/" as={Link}>Home</Nav.Link>
-            <Nav.Link to="/portfolio" as={Link}>Portfolio</Nav.Link>
-            <Nav.Link to="/about" as={Link}>About</Nav.Link>
-            <Nav.Link to="/contact" as={Link}>Contact</Nav.Link>
+            <Nav.Link to="/" as={Link}>
+              Home
+            </Nav.Link>
+            <Nav.Link to="/portfolio" as={Link}>
+              Portfolio
+            </Nav.Link>
+            <Nav.Link to="/about" as={Link}>
+              About
+            </Nav.Link>
+            <Nav.Link to="/contact" as={Link}>
+              Contact
+            </Nav.Link>
             {/* ...other links */}
           </Nav>
         </Navbar.Collapse>

@@ -1,9 +1,11 @@
 ## Adding Images and Albums
 
 ### Images
+
 To add images to the site, you need to place the image files in the `src/images/albums/` directory. Ensure the images are in an appropriate format (e.g., jpg, png).
 
 ### Albums
+
 An album is a collection of images. To create a new album:
 
 1. Create a new folder inside `src/images/albums/`.

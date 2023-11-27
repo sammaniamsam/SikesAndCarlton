@@ -1,9 +1,9 @@
 // src/components/withAlbumData.js
 
 // Import necessary modules from React and Gatsby
-import React, { useEffect, useState } from 'react';
-import { graphql, useStaticQuery } from 'gatsby';
-import exifReader from 'exifreader';
+import React, { useEffect, useState } from "react";
+import { graphql, useStaticQuery } from "gatsby";
+import exifReader from "exifreader";
 
 // Create a Higher Order Component (HOC) to fetch album data
 export const withAlbumData = (Component) => {
@@ -12,11 +12,7 @@ export const withAlbumData = (Component) => {
     // Use Gatsby's useStaticQuery hook to perform a static GraphQL query.
     const data = useStaticQuery(graphql`
       query {
-        allFile(
-          filter: {
-            sourceInstanceName: { eq: "albums" }
-          }
-        ) {
+        allFile(filter: { sourceInstanceName: { eq: "albums" } }) {
           edges {
             node {
               relativeDirectory
@@ -38,7 +34,9 @@ export const withAlbumData = (Component) => {
     const [sortedData, setSortedData] = useState([]);
 
     useEffect(() => {
-      const filteredData = data.allFile.edges.filter(edge => edge.node.relativeDirectory === props.album);
+      const filteredData = data.allFile.edges.filter(
+        (edge) => edge.node.relativeDirectory === props.album
+      );
 
       // Function to extract and parse EXIF data
       const extractEXIFData = async (imagePath) => {
@@ -50,7 +48,7 @@ export const withAlbumData = (Component) => {
       function sortEdgesByExifDate(edges) {
         // Function to format the EXIF date string
         const formatExifDate = (dateStr) => {
-          return dateStr.replace(/:/, '-').replace(/:/, '-').replace(' ', 'T');
+          return dateStr.replace(/:/, "-").replace(/:/, "-").replace(" ", "T");
         };
 
         // Sorting the array of edges based on the exifDate
@@ -65,7 +63,7 @@ export const withAlbumData = (Component) => {
       const sortAlbumData = async () => {
         for (let edge of filteredData) {
           const exifData = await extractEXIFData(edge.node.publicURL);
-          edge.node.exifDate = exifData['DateTimeOriginal'].description;
+          edge.node.exifDate = exifData["DateTimeOriginal"].description;
         }
 
         setSortedData(sortEdgesByExifDate(filteredData));
