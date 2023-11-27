@@ -1,13 +1,13 @@
 /* src/components/about.css */
 .section {
-    padding: var(--space-5);
-    background-color: #f9f9f9;
+  padding: var(--space-5);
+  background-color: #f9f9f9;
 }
 
 .heading {
-    font-size: var(--font-lg);
+  font-size: var(--font-lg);
 }
 
 .content {
-    font-size: var(--font-md);
+  font-size: var(--font-md);
 }

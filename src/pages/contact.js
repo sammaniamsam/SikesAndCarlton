@@ -1,15 +1,15 @@
 // src/pages/contact.js
 
-import React from "react"
-import Layout from "../components/layout"
-import Seo from "../components/seo"
-import ContactForm from "../components/contactForm"
+import React from "react";
+import Layout from "../components/layout";
+import Seo from "../components/seo";
+import ContactForm from "../components/contactForm";
 
 const ContactPage = () => (
   <Layout>
     <Seo title="Contact Us" />
     <ContactForm />
   </Layout>
-)
+);
 
 export default ContactPage;

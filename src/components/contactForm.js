@@ -1,9 +1,10 @@
 // src/components/ContactForm.js
 import React from "react";
 import { Form, Button } from "react-bootstrap";
-import '../css/contactForm.css';
+import "../css/contactForm.css";
 
-const GOOGLE_FORM_ACTION_URL = "https://docs.google.com/forms/d/e/1FAIpQLSeCGD6u9Hh-WE66PJlCEoBVBmwvKSDJatyZXmYCv8LhUDRFpg/formResponse";
+const GOOGLE_FORM_ACTION_URL =
+  "https://docs.google.com/forms/d/e/1FAIpQLSeCGD6u9Hh-WE66PJlCEoBVBmwvKSDJatyZXmYCv8LhUDRFpg/formResponse";
 const GOOGLE_FORM_NAME_ID = "entry.222030724";
 const GOOGLE_FORM_EMAIL_ID = "entry.1989085065";
 const GOOGLE_FORM_PHONE_ID = "entry.286980625";
@@ -41,6 +42,6 @@ const ContactForm = () => {
       <Button type="submit">Submit</Button>
     </Form>
   );
-}
+};
 
 export default ContactForm;

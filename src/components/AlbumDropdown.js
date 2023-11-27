@@ -1,7 +1,12 @@
-import React from 'react';
-import { Dropdown, FormControl } from 'react-bootstrap';
+import React from "react";
+import { Dropdown, FormControl } from "react-bootstrap";
 
-const AlbumDropdown = ({ searchValue, handleSearch, filteredAlbums, scrollToAlbum }) => {
+const AlbumDropdown = ({
+  searchValue,
+  handleSearch,
+  filteredAlbums,
+  scrollToAlbum,
+}) => {
   return (
     <Dropdown>
       <Dropdown.Toggle variant="light" id="dropdown-basic" className="w-100">
@@ -11,7 +16,7 @@ const AlbumDropdown = ({ searchValue, handleSearch, filteredAlbums, scrollToAlbu
       <Dropdown.Menu className="w-100">
         <FormControl
           autoFocus
-          style={{ width: 'calc(100% - 2rem)' }} // Adjust width to account for margins
+          style={{ width: "calc(100% - 2rem)" }} // Adjust width to account for margins
           className="mx-3 my-2"
           placeholder="Type to filter..."
           onChange={handleSearch}

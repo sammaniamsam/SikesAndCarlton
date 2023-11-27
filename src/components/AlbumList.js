@@ -1,6 +1,6 @@
-import React from 'react';
-import ListGroup from 'react-bootstrap/ListGroup';
-import AlbumItem from './AlbumItem';
+import React from "react";
+import ListGroup from "react-bootstrap/ListGroup";
+import AlbumItem from "./AlbumItem";
 
 const AlbumList = ({ albums, albumRefs }) => {
   return (
