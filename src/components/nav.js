@@ -13,6 +13,7 @@ const NavBar = () => {
         <Navbar.Collapse id="basic-navbar-nav">
           <Nav className="me-auto">
             <Nav.Link to="/" as={Link}>Home</Nav.Link>
+            <Nav.Link to="/portfolio" as={Link}>Portfolio</Nav.Link>
             <Nav.Link to="/about" as={Link}>About</Nav.Link>
             <Nav.Link to="/contact" as={Link}>Contact</Nav.Link>
             {/* ...other links */}
