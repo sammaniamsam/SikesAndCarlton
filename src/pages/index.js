@@ -1,39 +1,35 @@
-// pages/index.js
-
-import * as React from "react";
-import { useRef } from "react";
-
+import React from "react";
 import Layout from "../components/layout";
 import Seo from "../components/seo";
-import ListGroup from 'react-bootstrap/ListGroup';
-import AlbumList from '../components/AlbumList';
-import SearchAlbums from '../components/SearchAlbums';
-import { useAlbums } from '../hooks/useAlbums';
+import { Card, Row, Col, Container } from "react-bootstrap";
+import services from "../constants/servicesData.js"
 
 const IndexPage = () => {
-  const albums = useAlbums();
-  const [filteredAlbums, setFilteredAlbums] = React.useState(albums);
-  const albumRefs = useRef(albums.map(() => React.createRef()));
-
-  const scrollToAlbum = (index) => {
-    albumRefs.current[index].current.scrollIntoView({
-      behavior: "smooth",
-      block: "start",
-    });
-  };
-
   return (
     <Layout>
-      <div>
-        <ListGroup.Item>
-          <SearchAlbums
-            albums={albums}
-            onSearchResult={setFilteredAlbums}
-            scrollToAlbum={scrollToAlbum}
-          />
-        </ListGroup.Item>
-        <AlbumList albums={filteredAlbums} albumRefs={albumRefs} />
-      </div>
+      <Seo title="Home" />
+      <Container>
+        <h2 className="text-center my-4">Our Landscaping Services</h2>
+        {Object.keys(services).map((category, idx) => (
+          <div key={idx} className="mb-5">
+            <h3 className="mb-3">{category.charAt(0).toUpperCase() + category.slice(1)}</h3>
+            <Row xs={1} md={2} lg={3} className="g-4">
+              {services[category].map((service, serviceIdx) => (
+                <Col key={serviceIdx}>
+                  <Card>
+                    <Card.Body>
+                      <Card.Title>{service.name}</Card.Title>
+                      <Card.Text>
+                        {service.description}
+                      </Card.Text>
+                    </Card.Body>
+                  </Card>
+                </Col>
+              ))}
+            </Row>
+          </div>
+        ))}
+      </Container>
     </Layout>
   );
 };
