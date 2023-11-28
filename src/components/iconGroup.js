@@ -6,9 +6,9 @@ import {
   faYoutube,
   faGoogle,
 } from "@fortawesome/free-brands-svg-icons";
-import "../css/footer.css"; // Ensure this file is in the same directory and contains the previous CSS
+import "../css/iconGroup.css"; // Ensure this file is in the same directory and contains the previous CSS
 
-const Footer = () => {
+const IconGroup = () => {
   return (
     <Container fluid>
       <Row className="justify-content-center">
@@ -45,4 +45,4 @@ const Footer = () => {
   );
 };
 
-export default Footer;
+export default IconGroup;

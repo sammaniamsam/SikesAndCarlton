@@ -9,7 +9,7 @@ import * as React from "react";
 
 import "../css/layout.css";
 import NavBar from "./nav";
-import Footer from "./footer";
+import IconGroup from "./iconGroup";
 
 const Layout = ({ children }) => {
   return (
@@ -29,7 +29,7 @@ const Layout = ({ children }) => {
             fontSize: `var(--font-sm)`,
           }}
         >
-          <Footer />
+          <IconGroup />
         </footer>
       </div>
     </>

@@ -3,6 +3,7 @@ import React from "react";
 import { Navbar, Container, Nav } from "react-bootstrap";
 import "bootstrap/dist/css/bootstrap.min.css";
 import { Link } from "gatsby";
+import IconGroup from "./iconGroup"
 
 const NavBar = () => {
   return (
@@ -26,6 +27,7 @@ const NavBar = () => {
             </Nav.Link>
             {/* ...other links */}
           </Nav>
+          <IconGroup />
         </Navbar.Collapse>
       </Container>
     </Navbar>
