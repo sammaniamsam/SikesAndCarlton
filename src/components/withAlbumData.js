@@ -3,7 +3,6 @@
 // Import necessary modules from React and Gatsby
 import React, { useEffect, useState } from "react";
 import { graphql, useStaticQuery } from "gatsby";
-import exifReader from "exifreader";
 
 // Create a Higher Order Component (HOC) to fetch album data
 export const withAlbumData = (Component) => {
@@ -38,38 +37,16 @@ export const withAlbumData = (Component) => {
         (edge) => edge.node.relativeDirectory === props.album
       );
 
-      // Function to extract and parse EXIF data
-      const extractEXIFData = async (imagePath) => {
-        const response = await fetch(imagePath);
-        const buffer = await response.arrayBuffer();
-        return exifReader.load(buffer);
-      };
+      // Sort the filteredData based on image names
+      const sortedFilteredData = filteredData.slice().sort((a, b) => {
+        const nameA = a.node.publicURL.split("/").pop(); // Extract image name from URL
+        const nameB = b.node.publicURL.split("/").pop();
 
-      function sortEdgesByExifDate(edges) {
-        // Function to format the EXIF date string
-        const formatExifDate = (dateStr) => {
-          return dateStr.replace(/:/, "-").replace(/:/, "-").replace(" ", "T");
-        };
+        // Assuming image names are in the format "1.jpg", "2.jpg", etc.
+        return parseInt(nameA) - parseInt(nameB);
+      });
 
-        // Sorting the array of edges based on the exifDate
-        return edges.sort((a, b) => {
-          const dateA = new Date(formatExifDate(a.node.exifDate));
-          const dateB = new Date(formatExifDate(b.node.exifDate));
-          return dateA - dateB;
-        });
-      }
-
-      // Sorting logic
-      const sortAlbumData = async () => {
-        for (let edge of filteredData) {
-          const exifData = await extractEXIFData(edge.node.publicURL);
-          edge.node.exifDate = exifData["DateTimeOriginal"].description;
-        }
-
-        setSortedData(sortEdgesByExifDate(filteredData));
-      };
-
-      sortAlbumData();
+      setSortedData(sortedFilteredData);
     }, [props.album, data]);
 
     return <Component {...props} data={sortedData} />;
