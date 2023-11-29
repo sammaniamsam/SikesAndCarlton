@@ -34,10 +34,16 @@ for file in $files; do
     # Construct new filename
     new_name="${datetime}.${extension}"
 
-    # Rename the file
-    mv "$file" "$new_name"
+    # Extract the original directory of the file
+    original_dir=$(dirname "$file")
 
-    echo "Renamed: $file -> $new_name"
+    # Construct the new path with the original directory
+    new_path="$original_dir/$new_name"
+
+    # Rename the file by moving it to the new path
+    mv "$file" "$new_path"
+
+    echo "Renamed: $file -> $new_path"
   else
     echo "Error: Unable to extract DateTimeOriginal from $file"
     exiftool "$file"  # Add this line to print all Exif metadata for debugging
