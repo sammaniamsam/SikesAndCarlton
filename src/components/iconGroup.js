@@ -15,7 +15,7 @@ const IconGroup = () => {
         <Col xs={12} md={6} className="text-center">
           <div className="icon-group">
             <a
-              href="https://maps.google.com"
+              href="https://maps.app.goo.gl/wMzFithEsGXttbPz5"
               target="_blank"
               rel="noopener noreferrer"
               className="icon-button"
@@ -31,7 +31,7 @@ const IconGroup = () => {
               <FontAwesomeIcon icon={faFacebook} size="2x" />
             </a>
             <a
-              href="https://youtube.com"
+              href="https://www.youtube.com/channel/UCF9XepynEnqC1kGc-0s6w-w"
               target="_blank"
               rel="noopener noreferrer"
               className="icon-button"
