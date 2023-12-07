@@ -1,39 +1,30 @@
-import React from "react";
-import Layout from "../components/layout";
-import Seo from "../components/seo";
-import { Card, Row, Col, Container } from "react-bootstrap";
-import services from "../constants/servicesData.js";
+// src/pages/portfolio.js
 
-const IndexPage = () => {
+import * as React from "react";
+import { useRef } from "react";
+
+import Layout from "../components/layout";
+import AlbumList from "../components/AlbumList";
+import { useAlbums } from "../hooks/useAlbums";
+import ListGroup from "react-bootstrap/ListGroup";
+import AlbumItem from "../components/AlbumItem";
+import Seo from "../components/seo";
+
+const PortfolioPage = () => {
+  const albums = useAlbums();
+  const albumRefs = useRef(albums.map(() => React.createRef()));
+
   return (
-    <Layout>
-      <Seo title="Home" />
-      <Container>
-        <h2 className="text-center my-4">Our Landscaping Services</h2>
-        {Object.keys(services).map((category, idx) => (
-          <div key={idx} className="mb-5">
-            <h3 className="mb-3">
-              {category.charAt(0).toUpperCase() + category.slice(1)}
-            </h3>
-            <Row xs={1} md={2} lg={3} className="g-4">
-              {services[category].map((service, serviceIdx) => (
-                <Col key={serviceIdx}>
-                  <Card>
-                    <Card.Body>
-                      <Card.Title>{service.name}</Card.Title>
-                      <Card.Text>{service.description}</Card.Text>
-                    </Card.Body>
-                  </Card>
-                </Col>
-              ))}
-            </Row>
-          </div>
+    <Layout maxWidthOverride={"125rem"}>
+      <ListGroup variant={"flush"}>
+        {albums.map((album, index) => (
+          <AlbumItem key={index} album={album} ref={albumRefs.current[index]} />
         ))}
-      </Container>
+      </ListGroup>
     </Layout>
   );
 };
 
 export const Head = () => <Seo title="Home" />;
 
-export default IndexPage;
+export default PortfolioPage;
