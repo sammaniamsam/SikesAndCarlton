@@ -39,8 +39,9 @@ export const withAlbumData = (Component) => {
 
       // Sort the filteredData based on image names
       const sortedFilteredData = filteredData.slice().sort((a, b) => {
-        const nameA = a.node.publicURL.split("/").pop(); // Extract image name from URL
-        const nameB = b.node.publicURL.split("/").pop();
+        // Extract image name from URL
+        const nameA = a.node.publicURL.split("/").pop().split("_").join("");
+        const nameB = b.node.publicURL.split("/").pop().split("_").join("");
 
         // Assuming image names are in the format "1.jpg", "2.jpg", etc.
         return parseInt(nameA) - parseInt(nameB);
