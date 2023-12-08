@@ -4,12 +4,14 @@ import { Navbar, Container, Nav, Image } from "react-bootstrap";
 import "bootstrap/dist/css/bootstrap.min.css";
 import { Link } from "gatsby";
 import { useStaticQuery, graphql } from "gatsby";
-import IconGroup from "./iconGroup"
+import IconGroup from "./iconGroup";
 
 const NavBar = () => {
   const data = useStaticQuery(graphql`
     query {
-      myLogo: file(relativePath: { eq: "sikes-and-carlton-logo-with-background.svg" }) {
+      myLogo: file(
+        relativePath: { eq: "sikes-and-carlton-logo-with-background.svg" }
+      ) {
         publicURL
       }
     }
@@ -22,7 +24,7 @@ const NavBar = () => {
           <Image
             fluid={true}
             src={data.myLogo.publicURL}
-            style={{ maxHeight: "60px", marginBottom: 0}}
+            style={{ maxHeight: "60px", marginBottom: 0 }}
           />
         </Navbar.Brand>
         <Navbar.Toggle aria-controls="basic-navbar-nav" />
