@@ -4,7 +4,6 @@ import * as React from "react";
 import { useRef } from "react";
 
 import Layout from "../components/layout";
-import AlbumList from "../components/AlbumList";
 import { useAlbums } from "../hooks/useAlbums";
 import ListGroup from "react-bootstrap/ListGroup";
 import AlbumItem from "../components/AlbumItem";
@@ -16,6 +15,7 @@ const PortfolioPage = () => {
 
   return (
     <Layout maxWidthOverride={"125rem"}>
+      <Seo title="Home" />
       <ListGroup variant={"flush"}>
         {albums.map((album, index) => (
           <AlbumItem key={index} album={album} ref={albumRefs.current[index]} />

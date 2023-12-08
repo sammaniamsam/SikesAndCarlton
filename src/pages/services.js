@@ -1,7 +1,7 @@
 import React from "react";
 import Layout from "../components/layout";
 import Seo from "../components/seo";
-import { Card, Row, Col, Container } from "react-bootstrap";
+import { Card, Row, Col } from "react-bootstrap";
 import services from "../constants/servicesData.js";
 
 const IndexPage = () => {
@@ -30,7 +30,5 @@ const IndexPage = () => {
     </Layout>
   );
 };
-
-export const Head = () => <Seo title="Services" />;
 
 export default IndexPage;

@@ -8,7 +8,7 @@ import "../css/about.css";
 const About = () => (
   <Layout>
     <Seo
-      title="About Us"
+      title="About"
       description="Learn more about our company, our mission, and our team."
     />
     <Container fluid className={"section"}>
@@ -21,5 +21,7 @@ const About = () => (
     </Container>
   </Layout>
 );
+
+export const Head = () => <Seo title="About" />;
 
 export default About;
