@@ -15,7 +15,7 @@ const About = () => (
       <Row>
         <Col>
           <h1 className={"heading"}>About Us</h1>
-          <p className={"content"}>Your content here...</p>
+          <p className={"content"}>Coning soon!</p>
         </Col>
       </Row>
     </Container>
