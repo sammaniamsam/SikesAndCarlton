@@ -9,7 +9,7 @@ const ImageGallery = ({ data }) => {
     ...node.childImageSharp,
   }));
 
-  return <Gallery images={images} gutter={"0.1rem"} mdColWidth={25} />;
+  return <Gallery images={images} gutter={"0.1rem"} mdColWidth={14} />;
 };
 
 export default withAlbumData(ImageGallery);

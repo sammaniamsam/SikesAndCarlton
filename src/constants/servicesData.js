@@ -21,16 +21,6 @@ const services = {
       description:
         "Aesthetically manage heavy water flow with a dry creek bed design, providing an effective and natural-looking drainage solution.",
     },
-    {
-      name: "South Dry Creek Bed",
-      description:
-        "Customize water management for the southern areas of your property with our specialized dry creek bed solutions.",
-    },
-    {
-      name: "North Dry Creek Bed",
-      description:
-        "Address northern water flow effectively with tailored dry creek bed installations, blending functionality with natural beauty.",
-    },
   ],
   landscaping: [
     {
