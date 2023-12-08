@@ -2,9 +2,9 @@
 const services = {
   drainage: [
     {
-      name: "Channel Drains",
+      name: "Surface Drains",
       description:
-        "Effectively manage water runoff with our channel drain solutions, preventing water accumulation and protecting your landscape.",
+        "Effectively manage water runoff with channel drains and catch basins, preventing water accumulation and protecting your landscape.",
     },
     {
       name: "Routing of Downspout Water",
@@ -41,7 +41,7 @@ const services = {
     {
       name: "Retaining Walls",
       description:
-        "Secure your landscape with stylish and durable retaining walls, designed to be under 4 feet for elegance without the need for structural engineering.",
+        "Secure your landscape with stylish and durable retaining walls.",
     },
     {
       name: "Mulching",
@@ -58,6 +58,11 @@ const services = {
       description:
         "Create your perfect outdoor gathering space with our custom-designed paver patios, blending elegance and durability.",
     },
+    {
+      name: "Firepits",
+      description:
+        "Enjoy cozy evenings outdoors with our custom-designed firepits, crafted from a variety of high-quality materials.",
+    },
   ],
   irrigation: [
     {
@@ -71,16 +76,11 @@ const services = {
         "Optimize watering for your plants with our precise drip irrigation systems, promoting healthy growth and water conservation.",
     },
   ],
-  lightingAndMisc: [
+  lighting: [
     {
       name: "Landscape Lighting",
       description:
         "Illuminate your landscape with our solar lighting solutions, enhancing beauty and safety without the need for complex wiring.",
-    },
-    {
-      name: "Firepits",
-      description:
-        "Enjoy cozy evenings outdoors with our custom-designed firepits, crafted from a variety of high-quality materials.",
     },
   ],
 };
