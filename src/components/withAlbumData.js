@@ -43,7 +43,7 @@ export const withAlbumData = (Component) => {
         const nameA = a.node.publicURL.split("/").pop().split("_").join("");
         const nameB = b.node.publicURL.split("/").pop().split("_").join("");
 
-        // Assuming image names are in the format "1.jpg", "2.jpg", etc.
+        // Assuming image names are in the format "20220613_084940.jpg", "20220613_084948.jpg", etc.
         return parseInt(nameA) - parseInt(nameB);
       });
 
