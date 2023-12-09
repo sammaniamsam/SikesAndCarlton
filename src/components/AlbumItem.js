@@ -6,7 +6,7 @@ import Badge from "react-bootstrap/Badge";
 const AlbumItem = React.forwardRef(({ album }, ref) => {
   return (
     <ListGroup.Item ref={ref}>
-      <h4>
+      <h4 style={{marginLeft: -15}}>
         <Badge bg="secondary" className="text-wrap">
           {album.title}
         </Badge>
