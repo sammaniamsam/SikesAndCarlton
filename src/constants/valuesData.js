@@ -2,7 +2,7 @@ const values = [
   {
     title: "Trust",
     content:
-      "Trust is the bedrock of our relationships. Our promise is backed by a 90-day warranty on all plant services and an extended 180-day warranty for drainage solutions and structures, demonstrating our unwavering commitment to earning and preserving your trust.",
+      "Trust is the bedrock of our relationships. Our promise is backed by an extended 180-day warranty for drainage solutions and structures, demonstrating our unwavering commitment to earning and preserving your trust.",
   },
   {
     title: "Quality",
