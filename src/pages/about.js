@@ -1,12 +1,12 @@
-// src/pages/about.js
-import * as React from "react";
+import React from "react";
 import Layout from "../components/layout";
 import Seo from "../components/seo";
-import { Container, Row, Col } from "react-bootstrap";
+import { Container, Row, Col, Card } from "react-bootstrap";
 import "../css/about.css";
+import values from "../constants/valuesData";
 
 const About = () => (
-  <Layout>
+  <Layout maxWidthOverride={"125rem"}>
     <Seo
       title="About"
       description="Learn more about our company, our mission, and our team."
@@ -14,8 +14,19 @@ const About = () => (
     <Container fluid className={"section"}>
       <Row>
         <Col>
-          <h1 className={"heading"}>About Us</h1>
-          <p className={"content"}>Coning soon!</p>
+          <h2 className={"sub-heading"}>Our Values</h2>
+          <Row>
+            {values.map((value, index) => (
+              <Col lg={4} md={12} key={index}>
+                <Card className="mb-4">
+                  <Card.Body>
+                    <Card.Title>{value.title}</Card.Title>
+                    <Card.Text>{value.content}</Card.Text>
+                  </Card.Body>
+                </Card>
+              </Col>
+            ))}
+          </Row>
         </Col>
       </Row>
     </Container>
