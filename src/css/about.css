@@ -1,7 +1,4 @@
 /* src/components/about.css */
-.section {
-  padding: var(--space-5);
-}
 
 .heading {
   font-size: var(--font-lg);
