@@ -20,24 +20,33 @@ const IndexPage = () => {
         const categoryColor = colorMap[category];
 
         return (
-          <div key={idx} className="mb-5" style={{backgroundColor: categoryColor}}>
+          <div
+            key={idx}
+            className="mb-5"
+            style={{ backgroundColor: categoryColor }}
+          >
             <h3 className="mb-3" style={{ color: categoryColor }}>
               {category.charAt(0).toUpperCase() + category.slice(1)}
             </h3>
-            <Table bordered hover responsive style={{ backgroundColor: categoryColor }}>
+            <Table
+              bordered
+              hover
+              responsive
+              style={{ backgroundColor: categoryColor }}
+            >
               <thead>
-              <tr>
-                <th>Name</th>
-                <th>Description</th>
-              </tr>
+                <tr>
+                  <th>Name</th>
+                  <th>Description</th>
+                </tr>
               </thead>
               <tbody>
-              {services[category].map((service, serviceIdx) => (
-                <tr key={serviceIdx}>
-                  <td>{service.name}</td>
-                  <td>{service.description}</td>
-                </tr>
-              ))}
+                {services[category].map((service, serviceIdx) => (
+                  <tr key={serviceIdx}>
+                    <td>{service.name}</td>
+                    <td>{service.description}</td>
+                  </tr>
+                ))}
               </tbody>
             </Table>
           </div>

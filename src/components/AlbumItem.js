@@ -7,7 +7,9 @@ const AlbumItem = React.forwardRef(({ album }, ref) => {
   return (
     <ListGroup.Item ref={ref}>
       <h4>
-        <Badge bg="secondary" className="text-wrap">{album.title}</Badge>
+        <Badge bg="secondary" className="text-wrap">
+          {album.title}
+        </Badge>
       </h4>
       <ImageGallery album={album.path} />
     </ListGroup.Item>
