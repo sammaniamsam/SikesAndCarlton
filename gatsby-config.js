@@ -28,7 +28,7 @@ module.exports = {
     {
       resolve: `gatsby-plugin-manifest`,
       options: {
-        name: `gatsby-starter-default`,
+        name: `sikes-and-carlton`,
         short_name: `S&C`,
         start_url: `/`,
         background_color: `#F0D687`,
