@@ -4,12 +4,12 @@ import { Form, Button } from "react-bootstrap";
 // import "../css/contactForm.css";
 
 const GOOGLE_FORM_ACTION_URL =
-  "https://docs.google.com/forms/d/e/1FAIpQLSeCGD6u9Hh-WE66PJlCEoBVBmwvKSDJatyZXmYCv8LhUDRFpg/formResponse";
-const GOOGLE_FORM_NAME_ID = "entry.222030724";
-const GOOGLE_FORM_EMAIL_ID = "entry.1989085065";
-const GOOGLE_FORM_PHONE_ID = "entry.286980625";
-const GOOGLE_FORM_DETAILS_ID = "entry.1652381296";
-const GOOGLE_FORM_ADDRESS_ID = "entry.245607667";
+  "https://docs.google.com/forms/d/e/1FAIpQLSdXkPPKWh6uetRc9k87uxgbSUOZqr_-fZyRH_5ZqLIhaGcYXA/formResponse";
+const GOOGLE_FORM_NAME_ID = "entry.461958518";
+const GOOGLE_FORM_EMAIL_ID = "entry.114581294";
+const GOOGLE_FORM_PHONE_ID = "entry.517148974";
+const GOOGLE_FORM_DETAILS_ID = "entry.958979502";
+const GOOGLE_FORM_ADDRESS_ID = "entry.295656525";
 
 const ContactForm = () => {
   const formGroupStyle = {
